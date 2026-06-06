@@ -1,6 +1,6 @@
-# E-Commerce Customer Analytics & RFM Segmentation (EDA Project)
+#  E-Commerce Customer Analytics: RFM Segmentation, Cohort Retention & Market Basket Insights
 
-![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-2.0-green)
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive-orange)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
@@ -30,7 +30,9 @@ business insights.
 ---
 
 ## 📊 Dataset
-
+- **Dataset Source:** [UCI Machine Learning Repository - Online Retail II](https://archive.ics.uci.edu/dataset/502/online%2Bretail%2Bii)
+- **Citation:** Chen, D. (2012). Online Retail II [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5CG6D
+- **Dataset License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 - **Source:** UCI Online Retail II Dataset
 - **Size:** 525,461 transactions
 - **Period:** December 2009 — December 2010
@@ -150,6 +152,16 @@ jupyter notebook
 ```
 
 Open `ECommerce_Customer_Analytics_EDA.ipynb` and run all cells.
+
+---
+
+## Limitations
+
+- This analysis uses transactional data only, so customer demographics such as age, gender, and income are not available.
+- Cancelled orders and negative quantities were removed to focus on successful purchase behavior; return behavior can be analyzed separately.
+- Profit margin data is not available, so product performance is evaluated using revenue instead of profitability.
+- The analysis covers historical transactions, so external factors such as marketing campaigns, holidays, stock availability, and pricing changes are not fully captured.
+- Market basket analysis is based on frequently bought-together product pairs, not advanced association rules such as lift, confidence, or support.
 
 ---
 
