@@ -132,12 +132,14 @@ Run the notebook to explore these interactive visualizations.
 ---
 
 ## 📂 Project Structure
+```
 
 ├── ECommerce_Customer_Analytics_EDA.ipynb
 ├── images/
 ├── README.md
 └── requirements.txt
 
+```
 ---
 
 ## ▶️ How to Run
