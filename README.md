@@ -1,117 +1,170 @@
-# E-Commerce Customer Analytics: RFM Segmentation, Cohort Retention & Market Basket Insights
+# E-Commerce Customer Analytics & RFM Segmentation (EDA Project)
 
-Advanced exploratory data analysis project focused on customer behavior, revenue performance, retention, segmentation, and product bundling opportunities.
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Pandas](https://img.shields.io/badge/Pandas-2.0-green)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive-orange)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-## Business Objective
+## 📌 Project Overview
 
-The goal is to help an e-commerce business answer:
+This project analyzes real e-commerce transaction data to understand 
+customer behavior, revenue trends, and product bundling opportunities. 
+Every chart is connected to a business action — not just visualization 
+for the sake of it.
 
-- Which customers generate the most value?
-- Which products/categories drive revenue?
-- How does customer retention change across monthly cohorts?
-- Which products are frequently bought together?
-- What actions can improve retention, revenue, and cross-selling?
+This project is part of my Data Science and AI learning journey,
+focusing on transforming raw e-commerce data into actionable 
+business insights.
 
-## Tools Used
+---
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Plotly
-- Jupyter Notebook
+## 🚀 Project Highlights
 
-## Project Structure
+- Cleaned and processed 500K+ e-commerce transactions.
+- Performed customer segmentation using RFM analysis.
+- Built cohort retention analysis to measure repeat purchases.
+- Identified frequently purchased product bundles.
+- Created both static and interactive visualizations.
+- Converted analytical findings into business recommendations.
 
-```text
-.
-├── data/
-│   ├── raw/                 # Place original dataset here
-│   └── processed/           # Optional cleaned exports
+---
+
+## 📊 Dataset
+
+- **Source:** UCI Online Retail II Dataset
+- **Size:** 525,461 transactions
+- **Period:** December 2009 — December 2010
+- **Countries:** 40
+- **Columns:** Invoice, StockCode, Description, Quantity, 
+InvoiceDate, Price, Customer ID, Country
+
+---
+
+## 🛠️ Tools Used
+
+| Tool | Purpose |
+|------|---------|
+| Python | Core language |
+| Pandas | Data cleaning and manipulation |
+| NumPy | Numerical operations |
+| Matplotlib | Static visualizations |
+| Seaborn | Advanced static charts |
+| Plotly | Interactive visualizations |
+| Jupyter Notebook | Development environment |
+
+---
+
+## 📋 Steps Performed
+
+1. Data loading and inspection
+2. Missing value and duplicate analysis
+3. Data cleaning — removed returns, nulls, duplicates
+4. Feature engineering — revenue, cohort month, customer metrics
+5. Core EDA — KPIs, monthly trends, top products, countries
+6. RFM Segmentation — scored and segmented all customers
+7. Cohort Retention Analysis — monthly heatmap
+8. Market Basket Analysis — top product pairs
+9. Plotly Interactive Charts
+10. Business insights and recommendations
+
+---
+
+## 🔑 Key Insights
+
+- 💰 **Total Revenue:** £8,798,233 from 19,213 orders
+- 👥 **Total Customers:** 4,312 unique customers
+- 🏆 **Champions** (911 customers) generate **£5.6M** — 64% of total revenue
+- ⚠️ **700 At Risk customers** have not purchased recently — urgent reactivation needed
+- 📦 **Top Product:** WHITE HANGING HEART T-LIGHT HOLDER — highest revenue
+- 🌍 **United Kingdom** dominates — 85%+ of total revenue
+- 🔄 **Retention is low** — only 20-35% customers return after first purchase
+- 🛍️ **Top Bundle:** RED HANGING HEART + WHITE HANGING HEART — bought together 700+ times
+- 📈 **Revenue peaked** in November 2010 — seasonal trend detected
+
+---
+
+## 💡 Business Recommendations
+
+- **Protect Champions** with VIP perks and early access
+- **Win back At Risk** customers with urgency based campaigns
+- **Improve retention** — build second purchase journey within 30 days
+- **Bundle top pairs** — RED + WHITE HANGING HEART as checkout recommendation
+- **Expand into secondary markets** to reduce dependence on the UK customer base
+
+---
+
+## 📸 Visualizations
+
+### Monthly Revenue Trend
+![Monthly Revenue](images/monthly_revenue_trend.png)
+
+### Top 10 Products by Revenue
+![Top Products](images/top_10_products_revenue.png)
+
+### Top Countries by Revenue
+![Top Countries](images/top_countries_by_revenue.png)
+
+### Order Value Distribution
+![Order Value](images/order_value_distribution.png)
+
+### RFM Segment Revenue
+![RFM Segments](images/rfm_segment_revenue.png)
+
+### Customer Orders vs Revenue
+![Customer Orders](images/customer_orders_vs_revenue.png)
+
+### Cohort Retention Heatmap
+![Cohort](images/cohort_retention_heatmap.png)
+
+### Top Product Pairs
+![Market Basket](images/top_product_pairs.png)
+
+### 🎯 Interactive Visualizations
+
+The notebook also includes interactive Plotly charts for:
+
+- Monthly revenue trends
+- Top-performing products
+- Customer RFM segmentation
+
+Run the notebook to explore these interactive visualizations.
+
+---
+
+## 📂 Project Structure
+
 ├── ECommerce_Customer_Analytics_EDA.ipynb
+├── images/
 ├── README.md
-├── linkedin_post_draft.md
-├── requirements.txt
-└── .gitignore
-```
+└── requirements.txt
 
-## Recommended Dataset
+---
 
-This notebook works best with a transactional e-commerce dataset containing:
-
-- Order ID / Invoice ID
-- Customer ID
-- Order Date / Invoice Date
-- Product Name / Description
-- Quantity
-- Unit Price
-- Country / City
-- Category, if available
-
-Good examples include the UCI Online Retail dataset or Kaggle e-commerce transaction datasets.
-
-Place your file inside `data/raw/`, then update the `DATA_PATH` variable in the notebook.
-
-## Analysis Sections
-
-1. Problem Statement
-2. Dataset Overview
-3. Data Cleaning
-4. Feature Engineering
-5. Core EDA
-6. RFM Analysis
-7. Customer Segmentation
-8. Cohort Retention Analysis
-9. Basic Market Basket Analysis
-10. Plotly Interactive Visualizations
-11. Final Business Insights
-12. Business Recommendations
-
-## Sprint Plan
-
-### Day 1
-
-- Load and inspect dataset
-- Clean missing, duplicate, invalid, and negative values
-- Convert date columns
-- Engineer revenue, month, year, and customer metrics
-- Build core EDA visuals
-
-### Day 2
-
-- Build RFM table
-- Score customers by recency, frequency, and monetary value
-- Create business-friendly customer segments
-- Build cohort retention matrix and heatmap
-
-### Day 3
-
-- Identify frequently bought-together product pairs
-- Create Plotly interactive charts
-- Write final insights and recommendations
-- Polish notebook, README, and LinkedIn post
-
-## Key Deliverables
-
-- Clean Jupyter Notebook
-- 10-12 polished visuals
-- RFM segmentation
-- Cohort retention heatmap
-- Basic market basket analysis
-- Final insights and business actions
-- GitHub README
-- LinkedIn post draft
-
-## How To Run
+## ▶️ How to Run
 
 ```bash
 pip install -r requirements.txt
 jupyter notebook
 ```
 
-Open `ECommerce_Customer_Analytics_EDA.ipynb`, update `DATA_PATH`, and run the notebook top to bottom.
+Open `ECommerce_Customer_Analytics_EDA.ipynb` and run all cells.
 
-## Portfolio Notes
+---
 
-This project is designed for GitHub and LinkedIn sharing. Keep markdown explanations concise, place business insights under each major chart, and make sure every insight includes a recommended business action.
+## ✅ Conclusion
+
+This project goes beyond basic charts — every visualization 
+leads to a business action. RFM segmentation, cohort retention, 
+and market basket analysis together give a complete picture of 
+customer health and revenue opportunities.
+
+---
+
+## 👩‍💻 About
+
+**Minahil Kanwal**  
+BSCS Student | Aspiring AI & Data Science Professional
+
+This project reflects my ongoing journey to develop practical 
+skills in Python, Data Analytics, Machine Learning, and 
+Artificial Intelligence through real-world business datasets.
